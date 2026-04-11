@@ -36,7 +36,7 @@ REAL_H1 = {
 NATION_PATTERNS = [
     (["ijn ", "japan", "yamato", "shimakaze", "harugumo", "hayate", "zao", "yodo", "bungo",
       "azuma", "yoshino", "kitakami", "hosho", "shinano", "hakuryu", "mikasa", "yuubari",
-      "maya", "tokachi", "chikuma", "daisen", "aki", "suzuya", "i-56", "yumihari", "ise"], "IJN"),
+      "maya", "tokachi", "chikuma", "daisen", "aki", "suzuya", "i-56", "yumihari"], "IJN"),
     (["usn ", "usa ", "united states", "gearing", "burrows", "forrest", "montana", "vermont",
       "des moines", "worcester", "austin", "salem", "essex", "midway", "fdr", "franklin",
       "atlanta", "flint", "san diego", "kidd", "black", "halford", "johnston", "velos",
@@ -84,6 +84,7 @@ NATION_PATTERNS = [
 # Manual overrides for ships that pattern-matching can't reliably catch
 NATION_OVERRIDES = {
     138: "RN",   # Jupiter '42 — uses curly apostrophe, breaks pattern match
+    218: "IJN",  # Ise — 'ise' removed from IJN patterns (it false-matches 'cruisers')
 }
 
 # Battlecruiser line keywords (H3 text containing these → Battlecruiser class)
